@@ -141,7 +141,7 @@ def append_to_jsonl(file_path, items):
 
 if __name__ == "__main__":
     liste = ["32", "1206", "34", "85", "84", "92", "257", "76", "79", "80", "2910", "30", "13", "10", "12", "9", "1035", "29", "73", "1037", "8", "11", "183", "15", "28", "1176", "1782",
-             "1233", "2657", "1238", "2659", "1242", "2656", "2970", "2969", "2968", "1452", "2954", "2623", "2955", "1049", "2953", "543", "2950", "215", "2632", "2952", "2951", "2949", "2630"]  # Liste des catalog_ids à rechercher
+            "1233", "2657", "1238", "2659", "1242", "2656", "2970", "2969", "2968", "1452", "2954", "2623", "2955", "1049", "2953", "543", "2950", "215", "2632", "2952", "2951", "2949", "2630"]  # Liste des catalog_ids à rechercher
     country = [ "co.uk", "sk", "si", "ro", "lv", "lt", "hu","de", "fr", "es", "com", "it", "nl", "be", "pt", "at", "pl", "cz", "lu", "dk", "ee", "se", "gr", "ie", "hr"]
     country2 = ["fr"]
     for ctry in country:
@@ -150,8 +150,8 @@ if __name__ == "__main__":
         print(f"\nTotal articles récupérés : {total}")
         # Écrire les résultats dans le fichier vinted_products_api.jsonl (ajout sans doublons)
         if resultats:
-            added = append_to_jsonl("vinted_products_test.jsonl", resultats)
+            added = append_to_jsonl("vinted_products_api.jsonl", resultats)
             skipped = total - added
-            print(f"Résultats ajoutés à 'vinted_products_test.jsonl' ({added} nouvelles lignes).")
+            print(f"Résultats ajoutés à 'vinted_products_api.jsonl' ({added} nouvelles lignes).")
             if skipped:
                 print(f"{skipped} items ignorés (déjà présents ou sans id).")
